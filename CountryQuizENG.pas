@@ -2,11 +2,14 @@ program CountryQuiz (input, output);
 {Small quiz where you should write capitals of some countries}
 
 {Author: Vladislavs Mova;
- Version: 1.1.0}
+ Version: 1.1.1}
 
   const
   ROUND = 9; {Number of rounds of the game = 10}
   NAMES = 44; {45 countries and cities at all}
+  
+  type
+  tQuestionNum = array [0..ROUND] of integer;
     
   var
   i,
@@ -30,7 +33,29 @@ program CountryQuiz (input, output);
   myResult : array [0..ROUND + 1] of string = ('You schould go back to school!', 'Very, very bad.', 'Very bad.', 'Bad.', 
              'Mediocre.', 'One half you have guessed.', 'More than a half - not bad!', 'Good result.', 'Excellent!',
              'Terrific!', 'Everything is right! You are a real geographer!');
-  questionNum : array [0..ROUND] of integer;
+  questionNum : tQuestionNum;
+  
+  
+  {Proofs if the same question was already asked, and if yes, then looks for another, really new question}
+  function Proof(inQuestionNum : tQuestionNum;
+             var ioA : integer) : integer;
+             
+    var
+    numberFromRandom,
+    iProof : integer;
+    
+  begin
+    numberFromRandom := ioA;
+    for iProof := 0 to ROUND do
+      if inQuestionNum[iProof] = numberFromRandom then
+      begin
+        numberFromRandom := random(NAMES + 1);
+        numberFromRandom := Proof(inQuestionNum, numberFromRandom)
+      end
+      else
+        Proof := numberFromRandom
+  end;
+  
   
 begin
   writeln('Press "Enter" to start');
@@ -40,6 +65,7 @@ begin
   for i := 0 to ROUND do
   begin
     a := random(NAMES + 1);
+    a := Proof(questionNum, a);
     writeln(i + 1, '. Write a name of the capital of the following country: ', country[a], ' and press "Enter"');
     readln(answer[i]);
     questionNum[i] := a
