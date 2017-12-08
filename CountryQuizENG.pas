@@ -2,7 +2,7 @@ program CountryQuiz (input, output);
 {Small quiz where you should write capitals of some countries}
 
 {Author: Vladislavs Mova;
- Version: 1.2.0}
+ Version: 1.2.1}
 
   const
   ROUND = 9; {Number of rounds of the game = 10}
@@ -169,17 +169,17 @@ begin
   choose := Continent(choose);
  
   {Connect variables with appropriated "database"}
-  if choose = 1 then
-  begin
-    names := NAMES_EURO;
-    for i := 0 to names do
+  case choose of
+    1:
     begin
-      city[i] := cityEuro[i];
-      country[i] := countryEuro[i]
-    end
-  end
-  else
-    if choose = 2 then
+      names := NAMES_EURO;
+      for i := 0 to names do
+      begin
+        city[i] := cityEuro[i];
+        country[i] := countryEuro[i]
+      end
+    end;
+    2:
     begin
       names := NAMES_ASIA;
       for i := 0 to names do
@@ -187,37 +187,35 @@ begin
         city[i] := cityAsia[i];
         country[i] := countryAsia[i]
       end
-    end
-    else
-      if choose = 3 then
+    end;
+    3:
+    begin
+      names := NAMES_AFRICA;
+      for i := 0 to names do
       begin
-        names := NAMES_AFRICA;
-        for i := 0 to names do
-        begin
-          city[i] := cityAfrica[i];
-          country[i] := countryAfrica[i]
-        end
+        city[i] := cityAfrica[i];
+        country[i] := countryAfrica[i]
       end
-      else
-        if choose = 4 then
-        begin
-          names := NAMES_AMERICA;
-          for i := 0 to names do
-          begin
-            city[i] := cityAmerica[i];
-            country[i] := countryAmerica[i]
-          end
-        end
-        else
-          if choose = 5 then
-          begin
-            names := NAMES_OCEANIA;
-            for i := 0 to names do
-            begin
-              city[i] := cityOceania[i];
-              country[i] := countryOceania[i]
-            end
-          end;
+    end;
+    4:
+    begin
+      names := NAMES_AMERICA;
+      for i := 0 to names do
+      begin
+        city[i] := cityAmerica[i];
+        country[i] := countryAmerica[i]
+      end
+    end;
+    5:
+    begin
+      names := NAMES_OCEANIA;
+      for i := 0 to names do
+      begin
+        city[i] := cityOceania[i];
+        country[i] := countryOceania[i]
+      end
+    end
+  end;
       
   writeln;
   
