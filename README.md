@@ -3,6 +3,9 @@ My first program
 
 Updates:
 
+V. 1.2.1
+-Code optimized
+
 V. 1.2.0
 -All continens added
 
