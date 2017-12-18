@@ -3,6 +3,9 @@ My first program
 
 Updates:
 
+V. 1.2.2
+-Small corrections
+
 V. 1.2.1
 -Code optimized
 
