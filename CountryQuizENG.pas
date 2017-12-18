@@ -2,7 +2,7 @@ program CountryQuiz (input, output);
 {Small quiz where you should write capitals of some countries}
 
 {Author: Vladislavs Mova;
- Version: 1.2.1}
+ Version: 1.2.2}
 
   const
   ROUND = 9; {Number of rounds of the game = 10}
@@ -46,7 +46,7 @@ program CountryQuiz (input, output);
              {20}'Kuwait', {21}'Bishkek', {22}'Vientiane', {23}'Beirut', {24}'Kuala Lumpur', {25}'Male', {26}'Ulaanbaatar', 
              {27}'Nay Pyi Taw', {28}'Kathmandu', {29}'Muscat', {30}'Islamabad', {31}'Manila', {32}'Doha', {33}'Riyadh', 
              {34}'Singapore', {35}'Kotte', {36}'Damascus', {37}'Dushanbe', {38}'Bangkok', {39}'Dili', {40}'Ankara', 
-             {41}'Ashgabat', {42}'Abu Dhabi', {43}'Tashkent', {44}'Hanoi', {45}'Sana');
+             {41}'Ashgabat', {42}'Abu Dhabi', {43}'Tashkent', {44}'Hanoi', {45}'Sana''a');
   countryAsia : array [0..NAMES_ASIA] of string = ({0}'Afganistan', {1}'Armenia', {2}'Azerbaijan', {3}'Bahrain', 
              {4}'Bangladesh', {5}'Bhutan', {6}'Brunei', {7}'Cambodia', {8}'China', {9}'Georgia', {10}'India', {11}'Indonesia',
              {12}'Iran', {13}'Iraq', {14}'Israel', {15}'Japan', {16}'Jordan', {17}'Kazakhstan', {18}'North Korea',
@@ -57,7 +57,7 @@ program CountryQuiz (input, output);
              {45}'Yemen');
              
   cityAfrica : array [0..NAMES_AFRICA] of string = ({0}'Algiers', {1}'Luanda', {2}'Porto-Novo', {3}'Gaborone', {4}'Ouagadougou', 
-             {5}'Bujumbura', {6}'Yaounde', {7}'Praia', {8}'Bangui', {9}'Ndjamena', {10}'Moroni', {11}'Kinshasa', 
+             {5}'Bujumbura', {6}'Yaounde', {7}'Praia', {8}'Bangui', {9}'N''Djamena', {10}'Moroni', {11}'Kinshasa', 
              {12}'Brazzaville', {13}'Djibouti', {14}'Cairo', {15}'Malabo', {16}'Asmara', {17}'Addis Ababa', {18}'Liberville', 
              {19}'Banjul', {20}'Accra', {21}'Conakry', {22}'Bissau', {23}'Yamoussoukro', {24}'Nairobi', {25}'Maseru', 
              {26}'Monrovia', {27}'Tripoli', {28}'Antananarivo', {29}'Lilongwe', {30}'Bamako', {31}'Nouakchott', {32}'Port Louis', 
@@ -76,8 +76,8 @@ program CountryQuiz (input, output);
              
   cityAmerica : array [0..NAMES_AMERICA] of string = ({0}'Buenos Aires', {1}'Sucre', {2}'Brasilia', {3}'Santiago', {4}'Bogota', 
              {5}'Quito', {6}'Georgetown', {7}'Asuncion', {8}'Lima', {9}'Paramaribo', {10}'Montevideo', {11}'Caracas', {12}'Stanley', 
-             {13}'Cayenne', {14}'St. Johns', {15}'Nassau', {16}'Bridgetown', {17}'Belmopan', {18}'Ottawa', {19}'San Jose', 
-             {20}'Havana', {21}'Roseau', {22}'Santo Domingo', {23}'San Salvador', {24}'St. Georges', {25}'Guatemala City', 
+             {13}'Cayenne', {14}'St. John''s', {15}'Nassau', {16}'Bridgetown', {17}'Belmopan', {18}'Ottawa', {19}'San Jose', 
+             {20}'Havana', {21}'Roseau', {22}'Santo Domingo', {23}'San Salvador', {24}'St. George''s', {25}'Guatemala City', 
              {26}'Port-au-Prince', {27}'Tegucigalpa', {28}'Kingston', {29}'Mexico City', {30}'Managua', {31}'Panama City', 
              {32}'Basseterre', {33}'Castries', {34}'Kingstown', {35}'Port of Spain', {36}'Washington', {37}'The Valley', 
              {38}'Hamilton', {39}'Road Town', {40}'George Town', {41}'Plymouth', {42}'Cockburn Town', {43}'Oranjestad', 
@@ -95,7 +95,7 @@ program CountryQuiz (input, output);
              {53}'United States Virgin Islands');
              
   cityOceania : array [0..NAMES_OCEANIA] of string = ({0}'Canberra', {1}'Palikir', {2}'Suva', {3}'Tarawa', {4}'Majuro', 
-             {5}'Wellington', {6}'Ngerulmud', {7}'Port Moresby', {8}'Apia', {9}'Honiara', {10}'Nukualofa', {11}'Funafuti', 
+             {5}'Wellington', {6}'Ngerulmud', {7}'Port Moresby', {8}'Apia', {9}'Honiara', {10}'Nuku''alofa', {11}'Funafuti', 
              {12}'Port Vila', {13}'Avarua', {14}'Alofi', {15}'Pago Pago', {16}'Papeete', {17}'Hagatna', {18}'Noumea', {19}'Kingston', 
              {20}'Saipan', {21}'Adamstown', {22}'Mata-Utu');
   countryOceania : array [0..NAMES_OCEANIA] of string = ({0}'Australia', {1}'Federated States of Micronesia', {2}'Fiji', {3}'Kiribati',
