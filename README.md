@@ -3,6 +3,10 @@ My first program
 
 Updates:
 
+V. 1.3.0
+-Now it is possible to play "mixed" game, where asked questions about countries all around the world
+-Code optimized: data bases are in separated files yet
+
 V. 1.2.2
 -Small corrections
 
