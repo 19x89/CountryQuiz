@@ -3,6 +3,9 @@ My first program
 
 Updates:
 
+v. 1.4.0
+-Russian language added
+
 V. 1.3.0
 -Now it is possible to play "mixed" game, where asked questions about countries all around the world
 -Code optimized: data bases are in separated files yet
