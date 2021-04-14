@@ -1,5 +1,5 @@
 # CountryQuiz
-My first program
+Small GeoGame
 
 Updates:
 
